@@ -1,0 +1,4 @@
+zy(){;xa;xb;;;a=2;b=3;w(a<b){a=0;}u{b=0;}s0;}#
+zy(){;xa;xb;;;a=2;b=3;w(a<b){a=0;}s0;}#
+zy(){;xa;xb;;;a=2;b=3;t(a<b){a=1;}s0;}#
+zy(){;xa;xb;;;a=2;b=3;w(a<b){;t(a<b){a=0;}w(a<b){a=3;}}u{r(a);}s0;}#

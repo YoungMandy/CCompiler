@@ -1,0 +1,35 @@
+assume cs:code,ds:data
+data segment
+	a dd 0
+	b dd 0
+	T1 dd 0
+	T2 dd 0
+data ends
+code segment
+start:
+	mov ax,data
+	mov ds,ax
+L1:	mov ax,1
+	mov a,ax
+L2:	mov ax,3
+	mov b,ax
+L3:	cmp a,b
+	jna L7
+L5:	mov ax,1
+	mov a,ax
+L6:	jmp short L8
+L7:	mov ax,3
+	mov a,ax
+L8:	cmp a,b
+	jnb L13
+L10:	mov ah,01h
+	int 21h
+	mov a,ah
+L11:	mov dl,a
+	mov ah,2
+	int 21h
+L12:	jmp short L8
+L13:	mov ax,4c00h
+	int 21th
+code ends
+end start
